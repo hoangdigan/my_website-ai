@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltrans Logistics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+
+            /* N8N Chat Widget Customization */
+            --chat--color-primary: var(--primary-color);
+            --chat--color-primary-shade-50: #004080;
+            --chat--color-primary-shade-100: #004d99;
+            --chat--color-secondary: #0066cc;
+            --chat--color-secondary-shade-50: #0059b3;
+            --chat--color-white: #ffffff;
+            --chat--color-light: #f2f4f8;
+            --chat--color-light-shade-50: #e6e9f1;
+            --chat--color-light-shade-100: #c2c5cc;
+            --chat--color-medium: #d2d4d9;
+            --chat--color-dark: #101330;
+            --chat--color-disabled: #777980;
+            --chat--color-typing: #404040;
+
+            --chat--spacing: 1rem;
+            --chat--border-radius: 0.25rem;
+            --chat--transition-duration: 0.15s;
+
+            --chat--window--width: 1600px;
+            --chat--window--height: 600px;
+
+            --chat--header-height: auto;
+            --chat--header--padding: var(--chat--spacing);
+            --chat--header--background: var(--primary-color);
+            --chat--header--color: var(--chat--color-white);
+            --chat--header--border-top: none;
+            --chat--header--border-bottom: none;
+            --chat--heading--font-size: 2em;
+            --chat--subtitle--font-size: inherit;
+            --chat--subtitle--line-height: 1.8;
+
+            --chat--textarea--height: 50px;
+
+            --chat--message--font-size: 1rem;
+            --chat--message--padding: var(--chat--spacing);
+            --chat--message--border-radius: var(--chat--border-radius);
+            --chat--message-line-height: 1.8;
+            --chat--message--bot--background: var(--chat--color-white);
+            --chat--message--bot--color: var(--chat--color-dark);
+            --chat--message--bot--border: none;
+            --chat--message--user--background: var(--chat--color-secondary);
+            --chat--message--user--color: var(--chat--color-white);
+            --chat--message--user--border: none;
+            --chat--message--pre--background: rgba(0, 0, 0, 0.05);
+
+            --chat--toggle--background: var(--chat--color-primary);
+            --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+            --chat--toggle--active--background: var(--chat--color-primary-shade-100);
+            --chat--toggle--color: var(--chat--color-white);
+            --chat--toggle--size: 64px;
+        }
+        
+        .header-top {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .main-nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('logistics-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .office-info {
+            padding: 20px;
+            border: 1px solid #eee;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .hero-section h1 {
+            font-family: 'Raleway';
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: none;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Raleway';
+            font-weight: 700;
+        }
+
+        .dropdown-item {
+            font-family: 'Raleway';
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="fas fa-phone"></i> +84 287-108-8499</span>
+                    <span class="ms-3"><i class="fas fa-envelope"></i> info@voltransvn.com</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <span>Mon — Sat: 8AM — 5PM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Voltrans Logistics" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Welcome to Voltrans</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Our Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Track and Trace</a></li>
+                            <li><a class="dropdown-item" href="#">Sea Freight</a></li>
+                            <li><a class="dropdown-item" href="#">Air Freight</a></li>
+                            <li><a class="dropdown-item" href="#">Inland Freight</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="request-for-quotation.html">Request For Quotation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1>Welcome to Voltrans</h1>
+            <p class="lead">Your Reliable Global Logistics Partner Since 2004</p>
+        </div>
+    </section>
+
+    <!-- Welcome Message -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Message from the President</h2>
+                    <p>Dear Esteemed Clients,</p>
+                    <p>Since 2004, Voltrans has adhered to the operation philosophy of "integrity, diligence and innovation" towards specialization, informational global system. We continue to provide top notched global freight service to each and every client no matter how large our client base is, and manage every business aspect with high performance and superior quality.</p>
+                    <p class="text-end">- Peter Vo Ta Vinh – President</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Offices</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="office-info">
+                        <h4>HEAD OFFICE</h4>
+                        <p>Tel: +84 287-108-8499</p>
+                        <p>Email: info@voltransvn.com</p>
+                        <p>Hours: Mon — Sat: 8AM — 5PM</p>
+                    </div>
+                </div>
+                <!-- Add more office locations as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CONTACT US</h5>
+                    <p>174/13 Dien Bien Phu St, Ward 17</p>
+                    <p>Binh Thanh District, Ho Chi Minh City</p>
+                    <p>Vietnam</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Our Services</a></li>
+                        <li><a href="#" class="text-white">Track and Trace</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>WORKING HOURS</h5>
+                    <p>Monday - Saturday</p>
+                    <p>8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- N8N Chat Widget -->
+    <script>
+        window.n8nConfig = {
+            host: 'YOUR_N8N_HOST', // Replace with your n8n server URL
+            workflowId: 'YOUR_WORKFLOW_ID', // Replace with your workflow ID
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@n8n/chat-widget@latest/dist/n8n-chat-widget.min.js"></script>
+
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+    <!-- Add this new style block after all other styles and before the chat script -->
+    <style>
+        /* Override n8n chat widget styles */
+        :root {
+            --chat--window--width: 800px !important;
+            --chat--window--height: 600px !important;
+            --chat--color-primary: #e74266 !important;
+            --chat--header--background: var(--primary-color) !important;
+            
+            /* Message text size */
+            --chat--message--font-size: 0.875rem !important;  /* Reduced from 1rem to 0.875rem */
+            --chat--subtitle--font-size: 0.875rem !important;
+            
+            /* Button colors with smoother transition */
+            --chat--toggle--background: #e74266 !important;
+            --chat--toggle--hover--background: var(--primary-color) !important;
+            --chat--toggle--active--background: var(--primary-color) !important;
+            --chat--transition-duration: 0.3s !important;
+        }
+
+        /* Force the chat window width and enhance button transitions */
+        .n8n-chat-window {
+            width: 800px !important;
+            max-width: 800px !important;
+        }
+
+        /* Make chat messages smaller */
+        .n8n-chat-message {
+            font-size: 0.875rem !important;
+            line-height: 1.4 !important;
+        }
+
+        /* Make welcome message smaller */
+        .n8n-chat-message-text {
+            font-size: 0.875rem !important;
+        }
+
+        /* Justify text in the chat box textarea */
+        .n8n-chat-input textarea {
+            text-align: justify !important;
+        }
+    </style>
+
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	
+
+    createChat({
+	webhookUrl: 'https://hoangdiganyh.app.n8n.cloud/webhook/d628ff01-f07e-4745-be13-c8320ccec1ea/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hi there! 👋',
+		'My name is VOLTRANS AI. How can I assist you today?'
+	],
+	i18n: {
+		en: {
+			title: 'VOLTRANS AI! 👋',
+			subtitle: "Start a chat. We're here to help you 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+</script>
+</body>
+</html>

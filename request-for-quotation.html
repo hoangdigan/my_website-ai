@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request For Quotation - Voltrans Logistics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+        }
+        
+        .header-top {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .main-nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Raleway';
+            font-weight: 700;
+        }
+
+        .dropdown-item {
+            font-family: 'Raleway';
+            font-weight: 700;
+        }
+
+        .page-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .page-title h1 {
+            font-family: 'Raleway';
+            font-weight: 700;
+        }
+
+        .form-section {
+            padding: 50px 0;
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .required:after {
+            content: " *";
+            color: red;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Copy the header from homepage -->
+    <!-- ... existing header and navigation ... -->
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Request For Quotation</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Voltrans Logistics</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Services</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Request For Quotation</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="mb-4">Should you need to consider expense for your shipment before loading, please send us cargo details for most reasonable services and rate.</p>
+                    
+                    <form id="quotationForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label required">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="email" class="form-label required">Your Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="deadline" class="form-label">Deadline</label>
+                                <input type="date" class="form-control" id="deadline">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="shipmentType" class="form-label required">Type of Shipments</label>
+                                <select class="form-select" id="shipmentType" required>
+                                    <option value="">---</option>
+                                    <option value="personal">Personal Effect</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="bound" class="form-label required">Bound</label>
+                                <select class="form-select" id="bound" required>
+                                    <option value="">---</option>
+                                    <option value="inbound">Inbound</option>
+                                    <option value="outbound">Outbound</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="term" class="form-label required">Term</label>
+                                <select class="form-select" id="term" required>
+                                    <option value="">---</option>
+                                    <option value="DAP">DAP</option>
+                                    <option value="DDP">DDP</option>
+                                    <option value="DDU">DDU</option>
+                                    <option value="doorDelivery">Door Delivery</option>
+                                    <option value="EXW">EXW</option>
+                                    <option value="FCA">FCA</option>
+                                    <option value="FOB">FOB</option>
+                                    <option value="doorToDoor">Door - Door</option>
+                                    <option value="FILO">FILO (Free In Liner Out)</option>
+                                    <option value="FIO">FIO (Free In Out)</option>
+                                    <option value="FIOS">FIOS (Free In Out Stowed)</option>
+                                    <option value="FIOST">FIOST (Free In Out Stowed Trimmed)</option>
+                                    <option value="FIOT">FIOT (Free In Out Trimmed)</option>
+                                    <option value="FLT">FLT (Full Liner Terms)</option>
+                                    <option value="LIFO">LIFO (Liner In Free Out)</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="mode" class="form-label required">Mode</label>
+                                <select class="form-select" id="mode" required>
+                                    <option value="">---</option>
+                                    <option value="express">Express/Courier</option>
+                                    <option value="air">Air</option>
+                                    <option value="fcl">FCL</option>
+                                    <option value="lcl">LCL</option>
+                                    <option value="bulk">Break Bulk/Bulk</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="country" class="form-label required">Country</label>
+                                <input type="text" class="form-control" id="country" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="from" class="form-label required">From</label>
+                                <input type="text" class="form-control" id="from" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="to" class="form-label required">To</label>
+                                <input type="text" class="form-control" id="to" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="commodityType" class="form-label required">Type of Commodity</label>
+                                <select class="form-select" id="commodityType" required>
+                                    <option value="">---</option>
+                                    <option value="general">General Cargo</option>
+                                    <option value="dg">DG Cargo</option>
+                                    <option value="reefer">Reefer Cargo</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="commodity" class="form-label required">Commodity</label>
+                                <input type="text" class="form-control" id="commodity" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="packageType" class="form-label required">Type of Packages</label>
+                                <select class="form-select" id="packageType" required>
+                                    <option value="">---</option>
+                                    <option value="NA">NA</option>
+                                    <option value="bag">Bag</option>
+                                    <option value="boxes">Boxes</option>
+                                    <option value="carton">Carton/Piece</option>
+                                    <option value="create">Create</option>
+                                    <option value="drum">Drum</option>
+                                    <option value="pallet">Pallet/Skid</option>
+                                    <option value="roll">Roll</option>
+                                    <option value="tube">Tube</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="cargoDetails" class="form-label required">Cargo Details</label>
+                                <textarea class="form-control" id="cargoDetails" rows="3" required></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="totalVolume" class="form-label required">Total Volume</label>
+                                <input type="text" class="form-control" id="totalVolume" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="addressType" class="form-label">Type of Address</label>
+                                <select class="form-select" id="addressType">
+                                    <option value="">---</option>
+                                    <option value="business">Business Location</option>
+                                    <option value="residential">Residential Location</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="pickupAddress" class="form-label">Pick Up Delivery Address</label>
+                                <textarea class="form-control" id="pickupAddress" rows="3"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="specialRequest" class="form-label">Special Request</label>
+                                <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="file" class="form-label">Attached File</label>
+                                <input type="file" class="form-control" id="file">
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copy the footer from homepage -->
+    <!-- ... existing footer ... -->
+
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+</body>
+</html> 
